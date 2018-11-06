@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        td {
+            width: 250px;
+            display: inline-block;
+            vertical-align: top;
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-bottom: 25px;
+            border: solid 1px;
+        }
+        h4 {
+            text-align: center;
+        }
+        label {
+            float: right;
+        }
+        div#holder {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <h4>Setup</h4>
+                <form>
+                    <input type="radio" name="premier_setup" id="ps" value=99.99 checked>Premier Setup
+                    <label>$99</label>
+                    <br>
+                </form>
+            </td>
+            <td>
+                <h4>Virus Shield+</h4>
+                <form>
+                    <input type="radio" name="virus_shield" id="vs_1" value=99.99>1 year
+                    <label>$99</label>
+                    <br>
+                    <input type="radio" name="virus_shield" id="vs_2" value=159.99>2 year
+                    <label>$159</label>
+                    <br>
+                </form>
+            </td>
+            <td>
+                <h4>SquareTrade</h4>
+                <form>
+                    <p>&lt; $300:</p>
+                    <input type="radio" name="squaretrade" id="less_2_basic" value=69.99>2 year Basic
+                    <label>$69</label>
+                    <br>
+                    <input type="radio" name="squaretrade" id="less_2_acc" value=99.99>2 year Accidental
+                    <label>$99</label>
+                    <br>
+                    <p>&gt; $300:</p>
+                    <input type="radio" name="squaretrade" id="more_2_basic" value=99.99>2 year Basic
+                    <label>$99</label>
+                    <br>
+                    <input type="radio" name="squaretrade" id="more_2_acc" value=199.99>2 year Accidental
+                    <label>$199</label>
+                    <br>
+                    <input type="radio" name="squaretrade" id="more_4_basic" value=199.99>4 year Basic
+                    <label>$199</label>
+                    <br>
+                    <input type="radio" name="squaretrade" id="more_4_acc" value=299.99>4 year Accidenta
+                    <label>$299</label>
+                    <br>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+    <div id="holder">
+        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+        <br>
+        <p id="total"></p>
+        <p id="discount"></p>
+        <p id="final"></p>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            var cost = parseFloat(document.getElementById("ps").value);
+            cost += parseFloat(document.querySelector('input[name="virus_shield"]:checked').value);
+            cost += parseFloat(document.querySelector('input[name="squaretrade"]:checked').value);
+
+            document.getElementById("total").innerHTML = "Total: " + cost.toFixed(2);
+            document.getElementById("discount").innerHTML = "Discount: " + (cost * .2).toFixed(2) + " (20% off)";
+            document.getElementById("final").innerHTML = "Final: " + (cost * .8).toFixed(2);
+        }
+    </script>
+</body>
+</html>

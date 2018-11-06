@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        td {
-            width: 250px;
-            display: inline-block;
-            vertical-align: top;
-            padding-left: 25px;
-            padding-right: 25px;
-            padding-bottom: 25px;
-            border: solid 1px;
-        }
-        h4 {
-            text-align: center;
-        }
-        label {
-            float: right;
-        }
-        div#holder {
-            margin-left: 10px;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -65,7 +47,7 @@
                     <input type="radio" name="squaretrade" id="more_4_basic" value=199.99>4 year Basic
                     <label>$199</label>
                     <br>
-                    <input type="radio" name="squaretrade" id="more_4_acc" value=299.99>4 year Accidenta
+                    <input type="radio" name="squaretrade" id="more_4_acc" value=299.99>4 year Accidental
                     <label>$299</label>
                     <br>
                 </form>
@@ -80,17 +62,5 @@
         <p id="discount"></p>
         <p id="final"></p>
     </div>
-
-    <script>
-        function calculateTotal() {
-            var cost = parseFloat(document.getElementById("ps").value);
-            cost += parseFloat(document.querySelector('input[name="virus_shield"]:checked').value);
-            cost += parseFloat(document.querySelector('input[name="squaretrade"]:checked').value);
-
-            document.getElementById("total").innerHTML = "Total: " + cost.toFixed(2);
-            document.getElementById("discount").innerHTML = "Discount: " + (cost * .2).toFixed(2) + " (20% off)";
-            document.getElementById("final").innerHTML = "Final: " + (cost * .8).toFixed(2);
-        }
-    </script>
 </body>
 </html>

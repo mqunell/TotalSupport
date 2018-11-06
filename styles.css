@@ -1,0 +1,21 @@
+td {
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    border: solid 1px;
+}
+
+h4 {
+    text-align: center;
+}
+
+label {
+    float: right;
+}
+
+div#holder {
+    margin-left: 10px;
+}

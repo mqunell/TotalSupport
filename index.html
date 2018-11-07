@@ -6,10 +6,11 @@
 </head>
 
 <body>
+    <h3>New PCs</h3>
     <table>
         <tr>
             <td>
-                <h4>Setup</h4>
+                <h4>Premier Setup</h4>
                 <form>
                     <input type="radio" name="premier_setup" id="ps" value=99.99 checked>Premier Setup
                     <label>$99</label>
@@ -19,36 +20,38 @@
             <td>
                 <h4>Virus Shield+</h4>
                 <form>
-                    <input type="radio" name="virus_shield" id="vs_1" value=99.99>1 year
-                    <label>$99</label>
-                    <br>
-                    <input type="radio" name="virus_shield" id="vs_2" value=159.99>2 year
+                    <input type="radio" name="new_virus_shield" id="new_vs_2" value=159.99>2 year
                     <label>$159</label>
+                    <br>
+                    <input type="radio" name="new_virus_shield" id="new_vs_1" value=99.99>1 year
+                    <label>$99</label>
                     <br>
                 </form>
             </td>
             <td>
                 <h4>SquareTrade</h4>
                 <form>
-                    <p>&lt; $300:</p>
-                    <input type="radio" name="squaretrade" id="less_2_basic" value=69.99>2 year Basic
-                    <label>$69</label>
-                    <br>
-                    <input type="radio" name="squaretrade" id="less_2_acc" value=99.99>2 year Accidental
-                    <label>$99</label>
-                    <br>
-                    <p>&gt; $300:</p>
-                    <input type="radio" name="squaretrade" id="more_2_basic" value=99.99>2 year Basic
-                    <label>$99</label>
-                    <br>
-                    <input type="radio" name="squaretrade" id="more_2_acc" value=199.99>2 year Accidental
-                    <label>$199</label>
-                    <br>
-                    <input type="radio" name="squaretrade" id="more_4_basic" value=199.99>4 year Basic
-                    <label>$199</label>
-                    <br>
-                    <input type="radio" name="squaretrade" id="more_4_acc" value=299.99>4 year Accidental
+                    <input type="radio" name="new_squaretrade" id="more_4_acc" value=299.99>4 year Accidental
                     <label>$299</label>
+                    <br>
+                    <input type="radio" name="new_squaretrade" id="more_4_basic" value=199.99>4 year Basic
+                    <label>$199</label>
+                    <br><br>
+
+                    <p>&gt; $300:</p>
+                    <input type="radio" name="new_squaretrade" id="more_2_acc" value=199.99>2 year Accidental
+                    <label>$199</label>
+                    <br>
+                    <input type="radio" name="new_squaretrade" id="more_2_basic" value=99.99>2 year Basic
+                    <label>$99</label>
+                    <br><br>
+
+                    <p>&lt; $300:</p>
+                    <input type="radio" name="new_squaretrade" id="less_2_acc" value=99.99>2 year Accidental
+                    <label>$99</label>
+                    <br>
+                    <input type="radio" name="new_squaretrade" id="less_2_basic" value=69.99>2 year Basic
+                    <label>$69</label>
                     <br>
                 </form>
             </td>
@@ -56,11 +59,73 @@
     </table>
 
     <div id="holder">
-        <button type="button" onclick="calculateTotal()">Calculate Total</button>
+        <button type="button" onclick="calculateNewTotal()">Calculate Total</button>
         <br>
-        <p id="total"></p>
-        <p id="discount"></p>
-        <p id="final"></p>
+        <p id="new_total"></p>
+        <p id="new_discount"></p>
+        <p id="new_final"></p>
+    </div>
+
+    <br><hr><br>
+
+    <h3>Existing PCs</h3>
+    <div>
+    <table>
+        <tr>
+            <td>
+                <h4>Diagnostic & Repair</h4>
+                <form>
+                    <p>Without current VS+:</p>
+                    <input type="radio" name="diagnostic_repair" id="dr" value=169.99 checked>Diag & Repair
+                    <label>$169</label>
+                    <br>
+                    <input type="radio" name="diagnostic_repair" id="rdr" value=0.01 checked>Rewards Diag & Repair
+                    <label>$0</label>
+                    <br><br>
+
+                    <p>With current VS+:</p>
+                    <input type="radio" name="diagnostic_repair" id="vr" value=0.00 checked>VR Redemption
+                    <label>$0</label>
+                    <br>
+                </form>
+            </td>
+            <td>
+                <h4>Virus Shield+</h4>
+                <form>
+                    <input type="radio" name="ex_virus_shield" id="ex_vs_2" value=161.99>2 year add-on
+                    <label>$159</label>
+                    <br>
+
+                    <input type="radio" name="ex_virus_shield" id="ex_vs_1" value=99.99>1 year add-on
+                    <label>$99</label>
+                    <br><br>
+
+                    <input type="radio" name="ex_virus_shield" id="vs_r" value=79.99>1 year renewal
+                    <label>$79</label>
+                    <br>
+                </form>
+            </td>
+            <td>
+                <h4>SquareTrade</h4>
+                <form>
+                    <input type="radio" name="ex_squaretrade" id="e_2" value=109.99>2 year Basic
+                    <label>$109</label>
+                    <br>
+                    <input type="radio" name="ex_squaretrade" id="e_1" value=69.99>1 year Basic
+                    <label>$69</label>
+                    <br>
+                </form>
+            </td>
+        </tr>
+    </table>
+  </div>
+
+    <div id="holder">
+        <button type="button" onclick="calculateExistingTotal()">Calculate Total</button>
+        <br>
+        <p id="ex_total"></p>
+        <p id="ex_discount"></p>
+        <p id="ex_final"></p>
     </div>
 </body>
 </html>

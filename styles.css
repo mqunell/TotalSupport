@@ -1,15 +1,24 @@
+* {
+    font-family: Arial;
+}
+
 td {
     width: 250px;
-    display: inline-block;
+    display: inline-table;
     vertical-align: top;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
     border: solid 1px;
 }
 
 h4 {
     text-align: center;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
 
 label {
@@ -18,4 +27,8 @@ label {
 
 div#holder {
     margin-left: 10px;
+}
+
+button {
+    margin-bottom: 10px;
 }

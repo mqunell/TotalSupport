@@ -1,10 +1,10 @@
-// Button handler
+// New button handler
 function calculateNewTotal() {
     cost = getCost("premier_setup", "new_virus_shield", "new_squaretrade");
     setOutput(cost, "new_total", "new_discount", "new_final");
 }
 
-// Button handler
+// Existing button handler
 function calculateExistingTotal() {
     cost = getCost("diagnostic_repair", "ex_virus_shield", "ex_squaretrade");
 
@@ -13,7 +13,7 @@ function calculateExistingTotal() {
     }
     else {
         document.getElementById("ex_total").innerHTML = "Total: " + cost.toFixed(2);
-        document.getElementById("ex_discount").innerHTML = "Since the VS+ renewal MUST be done via email, the Total Support coupon can no longer be applied.";
+        document.getElementById("ex_discount").innerHTML = "Since the VS+ renewal MUST be done via email, the Total Support coupon cannot be applied.";
     }
 }
 
